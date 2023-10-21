@@ -28,6 +28,7 @@ namespace Compito_Sistemi
         {
            textclasse.Text = Funzioni.TrovaClasse(textHost.Text, textSot.Text);
            BasePrivtext.Text = Funzioni.TrovaBasePriv(textclasse.Text);
+           subnettext.Text = Funzioni.TrovaSubnet(textclasse.Text, textSot.Text);
         }
     }
 }

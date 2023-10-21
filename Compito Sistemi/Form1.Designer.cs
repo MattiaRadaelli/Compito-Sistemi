@@ -37,6 +37,8 @@
             this.textclasse = new System.Windows.Forms.TextBox();
             this.BasePriv = new System.Windows.Forms.Label();
             this.BasePrivtext = new System.Windows.Forms.TextBox();
+            this.labelsub = new System.Windows.Forms.Label();
+            this.subnettext = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textHost
@@ -119,11 +121,30 @@
             this.BasePrivtext.Size = new System.Drawing.Size(145, 20);
             this.BasePrivtext.TabIndex = 8;
             // 
+            // labelsub
+            // 
+            this.labelsub.AutoSize = true;
+            this.labelsub.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelsub.Location = new System.Drawing.Point(536, 9);
+            this.labelsub.Name = "labelsub";
+            this.labelsub.Size = new System.Drawing.Size(51, 13);
+            this.labelsub.TabIndex = 9;
+            this.labelsub.Text = "Subnet:";
+            // 
+            // subnettext
+            // 
+            this.subnettext.Location = new System.Drawing.Point(539, 25);
+            this.subnettext.Name = "subnettext";
+            this.subnettext.Size = new System.Drawing.Size(145, 20);
+            this.subnettext.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.subnettext);
+            this.Controls.Add(this.labelsub);
             this.Controls.Add(this.BasePrivtext);
             this.Controls.Add(this.BasePriv);
             this.Controls.Add(this.textclasse);
@@ -152,6 +173,8 @@
         private System.Windows.Forms.TextBox textclasse;
         private System.Windows.Forms.Label BasePriv;
         private System.Windows.Forms.TextBox BasePrivtext;
+        private System.Windows.Forms.Label labelsub;
+        private System.Windows.Forms.TextBox subnettext;
     }
 }
 
