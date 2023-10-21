@@ -35,6 +35,8 @@
             this.butfaitut = new System.Windows.Forms.Button();
             this.classelabel = new System.Windows.Forms.Label();
             this.textclasse = new System.Windows.Forms.TextBox();
+            this.BasePriv = new System.Windows.Forms.Label();
+            this.BasePrivtext = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textHost
@@ -75,9 +77,9 @@
             // 
             // butfaitut
             // 
-            this.butfaitut.Location = new System.Drawing.Point(230, 25);
+            this.butfaitut.Location = new System.Drawing.Point(227, 25);
             this.butfaitut.Name = "butfaitut";
-            this.butfaitut.Size = new System.Drawing.Size(93, 68);
+            this.butfaitut.Size = new System.Drawing.Size(133, 68);
             this.butfaitut.TabIndex = 4;
             this.butfaitut.Text = "Calcola";
             this.butfaitut.UseVisualStyleBackColor = true;
@@ -97,14 +99,33 @@
             // 
             this.textclasse.Location = new System.Drawing.Point(369, 25);
             this.textclasse.Name = "textclasse";
-            this.textclasse.Size = new System.Drawing.Size(100, 20);
+            this.textclasse.Size = new System.Drawing.Size(145, 20);
             this.textclasse.TabIndex = 6;
+            // 
+            // BasePriv
+            // 
+            this.BasePriv.AutoSize = true;
+            this.BasePriv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BasePriv.Location = new System.Drawing.Point(366, 57);
+            this.BasePriv.Name = "BasePriv";
+            this.BasePriv.Size = new System.Drawing.Size(148, 13);
+            this.BasePriv.TabIndex = 7;
+            this.BasePriv.Text = "Indirizzo di Base Privato:";
+            // 
+            // BasePrivtext
+            // 
+            this.BasePrivtext.Location = new System.Drawing.Point(369, 73);
+            this.BasePrivtext.Name = "BasePrivtext";
+            this.BasePrivtext.Size = new System.Drawing.Size(145, 20);
+            this.BasePrivtext.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BasePrivtext);
+            this.Controls.Add(this.BasePriv);
             this.Controls.Add(this.textclasse);
             this.Controls.Add(this.classelabel);
             this.Controls.Add(this.butfaitut);
@@ -129,6 +150,8 @@
         private System.Windows.Forms.Button butfaitut;
         private System.Windows.Forms.Label classelabel;
         private System.Windows.Forms.TextBox textclasse;
+        private System.Windows.Forms.Label BasePriv;
+        private System.Windows.Forms.TextBox BasePrivtext;
     }
 }
 
