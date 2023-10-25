@@ -21,14 +21,18 @@ namespace Compito_Sistemi
         {
 
         }
-        public string classe = "";
-        public string basepriv = "";
-    
+
         private void butfaitut_Click(object sender, EventArgs e)
         {
+           string classe = "";
+           string basepriv = "";
+           int CIDRUltimoOttetto = 0;
+           int[] Sottoreti = new int[int.Parse(textSot.Text)];
            textclasse.Text = Funzioni.TrovaClasse(textHost.Text, textSot.Text);
            BasePrivtext.Text = Funzioni.TrovaBasePriv(textclasse.Text);
-           subnettext.Text = Funzioni.TrovaSubnet(textclasse.Text, textSot.Text);
+           subnettext.Text = Funzioni.TrovaSubnet(textclasse.Text, textSot.Text, ref CIDRUltimoOttetto);
+           CIDRtext.Text = Funzioni.TrovaCIDR(textclasse.Text, textSot.Text, ref CIDRUltimoOttetto);
+           Funzioni.TrovaRete(textclasse.Text, textSot.Text, ref CIDRUltimoOttetto, ref Sottoreti);
         }
     }
 }

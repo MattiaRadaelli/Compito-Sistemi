@@ -10,6 +10,7 @@ namespace Compito_Sistemi
 {
     public class Funzioni
     {
+
         public static string TrovaClasse(string Host, string Subnet)
         {
             string classe= "";
@@ -50,11 +51,11 @@ namespace Compito_Sistemi
             return Basepriv;
         }
 
-        public static string TrovaSubnet(string classe, string Subnet)
+        public static string TrovaSubnet(string classe, string Subnet, ref int CIDRULtOttet)
         {
             int classesub = 0;
             double subnetsub = 0;
-            int potenza = 7;
+            int potenza = 7;        
             string subnet = "";
             if (classe == "Classe A")
             {
@@ -72,10 +73,12 @@ namespace Compito_Sistemi
             {
                 subnetsub += Math.Pow(2, potenza);
                 potenza--;
+                CIDRULtOttet++;
                 if (subnetsub == 255)
                 {
                     classesub++;
                     subnetsub = 0;
+                    CIDRULtOttet = 0;
                     potenza = 7;
 
                 }
@@ -97,6 +100,57 @@ namespace Compito_Sistemi
                 subnet = "255.255.255.255";
             }
             return subnet;
+        }
+
+        public static string TrovaCIDR(string classe, string Subnet, ref int CIDRULtOttet)
+        {
+            double CIDR = 0;
+            if (classe == "Classe A")
+            {
+                CIDR = 8;
+            }
+            else if (classe == "Classe B")
+            {
+                CIDR = 16;
+            }
+            else if (classe == "Classe C")
+            {
+                CIDR = 24;
+            }
+            CIDR += CIDRULtOttet;
+            return CIDR.ToString();
+        }
+        public static void TrovaRete(string classe, string Subnet, ref int CIDRULtOttet, ref int [] array)
+        {
+            int Basepriv = 0;
+            int classesub = 0;
+            double subnetsub = 0;
+
+            for (double i = Math.Log(int.Parse(Subnet), 2); i > 0; i--)
+            {
+                CIDRULtOttet++;
+                if (subnetsub == 255)
+                {
+                    classesub++;
+                    subnetsub = 0;
+                    CIDRULtOttet = 0;
+                    potenza = 7;
+
+                }
+            }
+
+            if (classe == "Classe A")
+            {
+                
+            }
+            else if (classe == "Classe B")
+            {
+                
+            }
+            else if (classe == "Classe C")
+            {
+                
+            }
         }
     }
 
