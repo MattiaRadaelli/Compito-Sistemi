@@ -119,39 +119,9 @@ namespace Compito_Sistemi
             }
             CIDR += CIDRULtOttet;
             return CIDR.ToString();
-        }
-        public static void TrovaRete(string classe, string Subnet, ref int CIDRULtOttet, ref int [] array)
-        {
-            int Basepriv = 0;
-            int classesub = 0;
-            double subnetsub = 0;
 
-            for (double i = Math.Log(int.Parse(Subnet), 2); i > 0; i--)
-            {
-                CIDRULtOttet++;
-                if (subnetsub == 255)
-                {
-                    classesub++;
-                    subnetsub = 0;
-                    CIDRULtOttet = 0;
-                    potenza = 7;
-
-                }
-            }
-
-            if (classe == "Classe A")
-            {
-                
-            }
-            else if (classe == "Classe B")
-            {
-                
-            }
-            else if (classe == "Classe C")
-            {
-                
-            }
         }
     }
-
 }
+
+

@@ -32,7 +32,6 @@ namespace Compito_Sistemi
            BasePrivtext.Text = Funzioni.TrovaBasePriv(textclasse.Text);
            subnettext.Text = Funzioni.TrovaSubnet(textclasse.Text, textSot.Text, ref CIDRUltimoOttetto);
            CIDRtext.Text = Funzioni.TrovaCIDR(textclasse.Text, textSot.Text, ref CIDRUltimoOttetto);
-           Funzioni.TrovaRete(textclasse.Text, textSot.Text, ref CIDRUltimoOttetto, ref Sottoreti);
         }
     }
 }
